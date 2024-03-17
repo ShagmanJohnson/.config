@@ -42,7 +42,7 @@ from qtile_extras.widget.decorations import PowerLineDecoration
 
 mod = "mod4"
 terminal = "alacritty"
-myBrowser = "firefox"
+myBrowser = "brave"
 powerline1 = {
     "decorations": [
         PowerLineDecoration(path="rounded_left")
@@ -100,7 +100,7 @@ keys = [
     Key([mod], "t", lazy.spawn("transmission"), desc="Launch Transmission"),
     Key([mod], "f", lazy.spawn("pcmanfm"), desc="File Manager"),
     Key([mod, "shift"], "b", lazy.spawn("chromium"), desc="Launch Chromium"),
-    Key([mod], "d", lazy.spawn("discord"), desc="Discord"),
+    Key([mod], "d", lazy.spawn("flatpak run com.discordapp.Discord"), desc="Discord"),
     
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
@@ -243,7 +243,6 @@ screens = [
                 ),
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 # widget.StatusNotifier(),
-                widget.Systray(),
                 widget.Clock(
                        background = colors[6],
                     foreground = colors[0],
@@ -309,10 +308,6 @@ screens = [
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 # widget.StatusNotifier(),
                 widget.NetGraph(
-                    background = colors[0]
-                ),
-                widget.NvidiaSensors(
-                    fontsize = 10,
                     background = colors[0]
                 ),
                 widget.ThermalSensor(
