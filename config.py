@@ -30,7 +30,7 @@ import socket
 import subprocess
 from libqtile import qtile
 from libqtile.config import Click, Drag, Group, KeyChord, Key, Match, Screen
-from libqtile.command import lazy
+from libqtile.lazy import lazy
 from libqtile import layout, bar, widget, hook
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
@@ -97,8 +97,8 @@ keys = [
     Key([mod], "c", lazy.spawn("vscodium"), desc="Launch VsCodium"),
     Key([mod], "s", lazy.spawn("steam"), desc="Launch Steam"),
     Key([mod, "control"], "s", lazy.spawn("pavucontrol"), desc="Audio Controller"),
-    Key([mod], "t", lazy.spawn("transmission"), desc="Launch Transmission"),
-    Key([mod], "f", lazy.spawn("pcmanfm"), desc="File Manager"),
+    Key([mod], "t", lazy.spawn("qbittorrent"), desc="Launch Transmission"),
+    Key([mod], "f", lazy.spawn("thunar"), desc="File Manager"),
     Key([mod, "shift"], "b", lazy.spawn("chromium"), desc="Launch Chromium"),
     Key([mod], "d", lazy.spawn("flatpak run com.discordapp.Discord"), desc="Discord"),
     
@@ -192,9 +192,9 @@ layouts = [
 ]
 
 colors = [["#001219", "#001219"],
-          ["#005F73", "#005F73"],
-          ["#0A9396", "#0A9396"],
-          ["#94D2BD", "#94D2BD"],
+          ["#814602FF", "#732A00FF"],
+          ["#E9BC82FF", "#B4A17CFD"],
+          ["#E9ADDCFF", "#D2CC94FF"],
           ["#E9D8A6", "#E9D8A6"],
           ["#EE9B00", "#EE9B00"],
           ["#CA6702", "#CA6702"],
